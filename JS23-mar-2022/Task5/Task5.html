@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise #5</title>
+    <script src="Task5.js"></script>
+</head>
+
+<body>
+    <form>
+        <br />
+        <label> Password (min 6 characters):</label>
+        <input type="password" placeholder="Password" id="pass" onchange="pass1()" value="">
+        <p id="short" style="display: inline; color: red;"></p>
+        <br /><br />
+        <p id="short" style="display: inline;"></p>
+
+        <label>Repeat password :</label>
+        <input type="password" placeholder="Re-password" style="margin-left: 70px; " onchange="repass()" value=""
+            id="reepass">
+
+        <p id="dontmatch" style="display: inline; color: red ;"></p>
+        <br /><br />
+        <input type="submit" style="display:none" id="btn">
+    </form>
+    
+</body>
+
+</html>
