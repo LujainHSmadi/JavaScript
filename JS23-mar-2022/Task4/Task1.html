@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Task1.css">
+
 </head>
+
 <body>
     <form>
-        <select name="" id="">
-            <option>Arial</option>
-            <option>Times new roman </option>
+        <select name="" id="F" onchange="fontFam()">
+            <option>Select</option>
+            <option value="Arial">Arial</option>
+            <option value="TimesNewRoman">Times new roman </option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">cursive</option>
         </select>
 
-        <select>
-            <option>12</option>
-            <option>18</option>
+        <select id="s" onchange="fontSize()">
+            <option>size</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="24">12</option>
+            <option value="32">18</option>
         </select>
+
         <label for="1">Italic</label>
-        <input type="checkbox" name="font" id ="1" >
+        <input type="checkbox" id="a" onchange="fontItalic()" value="italic">
         <label for="2">Bold</label>
-        <input type="checkbox" name="font" id="2">
+        <input type="checkbox" id="b" onchange="fontBold()" value="bold">
         <label for="3">Underline</label>
-        <input type="checkbox" name="font" id="3">
+        <input type="checkbox" id="c" onchange="fontUderLine()" value="underline">
         <br>
         <br>
 
@@ -30,6 +41,7 @@
          This quick brown fox jumps over the lazy dog
         </textarea>
     </form>
-
+    <script src="Task1.js"></script>
 </body>
+
 </html>
