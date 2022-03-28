@@ -1,28 +1,21 @@
 
-
 function storage() {
-    document.getElementById("myfile").addEventListener("change", function () {
-
-        const reader = new FileReader();
-
-        reader.addEventListener("load", () => {
-            localStorage.setItem("image", reader.result);
-        });
-
-        reader.readAsDataURL(this.files[0]);
-    });
 
     var name = document.getElementById("fname").value;
     localStorage.setItem("My name", name);
+
     var age = document.getElementById("age").value;
     localStorage.setItem("age", age);
+
     var g1 = document.querySelector('input[name=gender]:checked').value;
     localStorage.setItem("gender", g1);
+
     var brief = document.getElementById("brief").value;
     localStorage.setItem("Description", brief);
 
     var major = document.getElementById("major").value;
     localStorage.setItem("major", major);
+
     var uni = document.getElementById("uni").value;
     localStorage.setItem("University", uni);
 
@@ -55,8 +48,25 @@ function storage() {
 
     document.getElementById("d2").innerHTML = "Major: " + localStorage.getItem("major") + "<br>" + "University: " + localStorage.getItem("University") + "<br>" + "Programing Language: " + localStorage.getItem("Java") + "," + localStorage.getItem("C#") + "," + localStorage.getItem('Python') + "," + localStorage.getItem("C++")
 
+    img = localStorage.getItem("image");
+
+    if (img) {
+        document.getElementById("myimg").setAttribute("src", img)
+    }
 
 
 }
+
+
+document.getElementById("myfile").addEventListener("change", function () {
+
+    const reader = new FileReader();
+
+    reader.addEventListener("load", () => {
+        localStorage.setItem("image", reader.result);
+    });
+
+    reader.readAsDataURL(this.files[0]);
+});
 
 
