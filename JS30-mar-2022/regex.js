@@ -25,6 +25,9 @@ document.getElementById("lname").addEventListener("change", function () {
         document.getElementById('2').style.color = 'red';
         document.getElementById('2').innerHTML = "numbers aren't allowed";
     }
+    else {
+        document.getElementById('2').innerHTML = "";
+    }
 
 });
 
@@ -40,6 +43,9 @@ document.getElementById("birthday").addEventListener("change", function () {
         document.getElementById('3').style.color = 'red';
         document.getElementById('3').innerHTML = "invalid format try :dd/mm/yyyy!";
     }
+    else {
+        document.getElementById('3').innerHTML = "";
+    }
     
 });
 
@@ -53,6 +59,9 @@ document.getElementById("email").addEventListener("change", function () {
     if (fn == false) {
         document.getElementById('4').style.color = 'red';
         document.getElementById('4').innerHTML = "invalid!";
+    }
+    else {
+        document.getElementById('4').innerHTML = "";
     }
 
 });
@@ -75,7 +84,7 @@ document.getElementById("conmail").addEventListener("change", function () {
 
 });
 
-document.getElementById("password").addEventListener('change', function () {
+document.getElementById("password").addEventListener("change", function () {
     password = this.value;
     check = /\b^([A-Z])/;
     if (check.test(password)) {
@@ -106,8 +115,8 @@ document.getElementById("password").addEventListener('change', function () {
 });
 
 
-document.getElementById("conpass").addEventListener('change', function () {
-    result = document.getElementById("password").value == document.getElementById("cpassword").value;
+document.getElementById("conpass").addEventListener("change", function () {
+    result = document.getElementById("password").value == document.getElementById("conpass").value;
     if (result) {
         document.getElementById("7").innerHTML = "";
     } else {
@@ -115,6 +124,6 @@ document.getElementById("conpass").addEventListener('change', function () {
         document.getElementById("7").innerHTML = "The password are not the same";
     }
 
-    if (document.getElementById("cpassword").value == "")
+    if (document.getElementById("conpass").value == "")
         document.getElementById("7").innerHTML = "";
 });
